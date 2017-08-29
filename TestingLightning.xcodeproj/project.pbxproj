@@ -13,6 +13,8 @@
 		2B16BAFC1F5515830000F6EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B16BAFA1F5515830000F6EE /* Main.storyboard */; };
 		2B16BAFE1F5515830000F6EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B16BAFD1F5515830000F6EE /* Assets.xcassets */; };
 		2B16BB011F5515830000F6EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B16BAFF1F5515830000F6EE /* LaunchScreen.storyboard */; };
+		2B16BB091F5519440000F6EE /* LightningLineNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B16BB081F5519440000F6EE /* LightningLineNode.swift */; };
+		2B16BB0B1F55268C0000F6EE /* LightningBoltNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B16BB0A1F55268C0000F6EE /* LightningBoltNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		2B16BAFD1F5515830000F6EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B16BB001F5515830000F6EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B16BB021F5515830000F6EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B16BB081F5519440000F6EE /* LightningLineNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightningLineNode.swift; sourceTree = "<group>"; };
+		2B16BB0A1F55268C0000F6EE /* LightningBoltNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightningBoltNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +62,13 @@
 			children = (
 				2B16BAF41F5515830000F6EE /* AppDelegate.swift */,
 				2B16BAF61F5515830000F6EE /* art.scnassets */,
-				2B16BAF81F5515830000F6EE /* GameViewController.swift */,
 				2B16BAFA1F5515830000F6EE /* Main.storyboard */,
 				2B16BAFD1F5515830000F6EE /* Assets.xcassets */,
 				2B16BAFF1F5515830000F6EE /* LaunchScreen.storyboard */,
 				2B16BB021F5515830000F6EE /* Info.plist */,
+				2B16BAF81F5515830000F6EE /* GameViewController.swift */,
+				2B16BB0A1F55268C0000F6EE /* LightningBoltNode.swift */,
+				2B16BB081F5519440000F6EE /* LightningLineNode.swift */,
 			);
 			path = TestingLightning;
 			sourceTree = "<group>";
@@ -139,6 +145,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B16BB091F5519440000F6EE /* LightningLineNode.swift in Sources */,
+				2B16BB0B1F55268C0000F6EE /* LightningBoltNode.swift in Sources */,
 				2B16BAF91F5515830000F6EE /* GameViewController.swift in Sources */,
 				2B16BAF51F5515830000F6EE /* AppDelegate.swift in Sources */,
 			);
