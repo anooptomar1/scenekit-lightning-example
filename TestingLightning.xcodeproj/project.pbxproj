@@ -15,7 +15,6 @@
 		2B16BB011F5515830000F6EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B16BAFF1F5515830000F6EE /* LaunchScreen.storyboard */; };
 		2B16BB091F5519440000F6EE /* LightningLineNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B16BB081F5519440000F6EE /* LightningLineNode.swift */; };
 		2B16BB0B1F55268C0000F6EE /* LightningBoltNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B16BB0A1F55268C0000F6EE /* LightningBoltNode.swift */; };
-		2BCACDB71F65C2630038C0ED /* SmokeGlow.scnp in Resources */ = {isa = PBXBuildFile; fileRef = 2BCACDB51F65C2630038C0ED /* SmokeGlow.scnp */; };
 		2BCACDB81F65C2630038C0ED /* smoke.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BCACDB61F65C2630038C0ED /* smoke.png */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +29,6 @@
 		2B16BB021F5515830000F6EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B16BB081F5519440000F6EE /* LightningLineNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightningLineNode.swift; sourceTree = "<group>"; };
 		2B16BB0A1F55268C0000F6EE /* LightningBoltNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightningBoltNode.swift; sourceTree = "<group>"; };
-		2BCACDB51F65C2630038C0ED /* SmokeGlow.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = SmokeGlow.scnp; sourceTree = "<group>"; };
 		2BCACDB61F65C2630038C0ED /* smoke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smoke.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,7 +71,6 @@
 				2B16BAF81F5515830000F6EE /* GameViewController.swift */,
 				2B16BB0A1F55268C0000F6EE /* LightningBoltNode.swift */,
 				2B16BB081F5519440000F6EE /* LightningLineNode.swift */,
-				2BCACDB51F65C2630038C0ED /* SmokeGlow.scnp */,
 				2BCACDB61F65C2630038C0ED /* smoke.png */,
 			);
 			path = TestingLightning;
@@ -142,7 +139,6 @@
 				2B16BB011F5515830000F6EE /* LaunchScreen.storyboard in Resources */,
 				2B16BAFE1F5515830000F6EE /* Assets.xcassets in Resources */,
 				2B16BAFC1F5515830000F6EE /* Main.storyboard in Resources */,
-				2BCACDB71F65C2630038C0ED /* SmokeGlow.scnp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

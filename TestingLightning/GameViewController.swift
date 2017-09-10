@@ -26,7 +26,7 @@ class GameViewController: UIViewController {
     
     
     // Make bigger if you want bigger line length and vice versa
-    let lineRangeCoefficient = 0.2
+    let lineRangeCoefficient = 0.5
 
     override func viewDidLoad() {
         super.viewDidLoad()
