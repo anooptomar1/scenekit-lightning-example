@@ -55,7 +55,11 @@ class LightningBoltNode: SCNNode {
     }
     
     func addLineToBolt(startPoint: SCNVector3, endPoint: SCNVector3, delay: Double) {
-        let line = LightningLineNode(from: startPoint, to: endPoint, radius: 0.08, color: UIColor.white)
+        let particleSystem = SCNParticleSystem(named: "art.scnassets/smokeGlow.scnp", inDirectory: nil)!
+        
+        let line = LightningLineNode(from: startPoint, to: endPoint, radius: 0.08, color: UIColor.clear)
+        particleSystem.emitterShape = line.geometry
+        line.addParticleSystem(particleSystem)
         if delay == 0 {
             self.addChildNode(line)
         } else {

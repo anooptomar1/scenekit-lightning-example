@@ -18,10 +18,12 @@ class GameViewController: UIViewController {
     let boltLifetime = 0.1
     
     // Line draw delay (in seconds). Set as 0 if you want whole bolt to draw instantly
-    let lineDrawDelay = 0.00375
+//    let lineDrawDelay = 0.00175
+    let lineDrawDelay = 0.0
     
     // 0.0 - the bolt will be a straight line. >1.0 - the bolt will look unnatural
-    let displaceCoefficient = 0.05
+    let displaceCoefficient = 0.15
+    
     
     // Make bigger if you want bigger line length and vice versa
     let lineRangeCoefficient = 0.05
