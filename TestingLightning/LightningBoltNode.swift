@@ -13,23 +13,23 @@ import SceneKit
 
 class LightningBoltNode: SCNNode {
     
-    var lifetime = 0.15
-    var lineDrawDelay = 0.02
-    var displaceCoefficient = 0.25
-    var lineRangeCoefficient = 1.8
+    var lifetime:Double
+    var lineDrawDelay:Double
+    var displaceCoefficient:Double
+    var lineRangeCoefficient:Double
     var pathArray = [SCNVector3]()
     
     init(startPoint: SCNVector3, endPoint: SCNVector3, lifetime: Double, lineDrawDelay: Double, displaceCoefficient: Double, lineRangeCoefficient: Double) {
-        super.init()
         self.lifetime = lifetime
         self.lineDrawDelay = lineDrawDelay
         self.displaceCoefficient = displaceCoefficient
         self.lineRangeCoefficient = lineRangeCoefficient
+        super.init()
         self.drawBolt(startPoint: startPoint, endPoint: endPoint)
     }
     
     required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)!
+        fatalError("init(coder:) has not been implemented")
     }
     
     // MARK: Drawing bolt
@@ -55,8 +55,16 @@ class LightningBoltNode: SCNNode {
     }
     
     func addLineToBolt(startPoint: SCNVector3, endPoint: SCNVector3, delay: Double) {
-        let line = LightningLineNode(from: startPoint, to: endPoint)
-        self.addChildNode(line)
+        let line = LightningLineNode(from: startPoint, to: endPoint, radius: 0.08, color: UIColor.white)
+        if delay == 0 {
+            self.addChildNode(line)
+        } else {
+            let delayAction = SCNAction.wait(duration: TimeInterval(delay))
+            let addLine = SCNAction.run({ (node) in
+                self.addChildNode(line)
+            })
+            self.runAction(SCNAction.sequence([delayAction, addLine]))
+        }
     }
     
     func createBolt(x1: Float, y1: Float, z1: Float, x2: Float, y2: Float, z2: Float, displace: Double) {

@@ -3,27 +3,29 @@
 import Foundation
 import SceneKit
 
-
-
-func normalizeVector(_ iv: SCNVector3) -> SCNVector3 {
-    let length = sqrt(iv.x * iv.x + iv.y * iv.y + iv.z * iv.z)
-    if length == 0 {
-        return SCNVector3(0.0, 0.0, 0.0)
-    }
-    
-    return SCNVector3( iv.x / length, iv.y / length, iv.z / length)
-    
-}
-
 class LightningLineNode: SCNNode {
     init(from startPoint: SCNVector3,
          to endPoint: SCNVector3,
          radius: CGFloat = 0.08,
          color: UIColor = .white) {
         super.init()
+        performMagic(from: startPoint, to: endPoint, radius: radius, color: color)
+    }
+    
+    private func normalizeVector(_ iv: SCNVector3) -> SCNVector3 {
+        let length = sqrt(iv.x * iv.x + iv.y * iv.y + iv.z * iv.z)
+        if length == 0 {
+            return SCNVector3(0.0, 0.0, 0.0)
+        }
         
-//        let particleSystem = SCNParticleSystem(named: "art.scnassets/reactor.scnp", inDirectory: nil)
+        return SCNVector3( iv.x / length, iv.y / length, iv.z / length)
         
+    }
+    
+    private func performMagic(from startPoint: SCNVector3,
+                              to endPoint: SCNVector3,
+                              radius: CGFloat,
+                              color: UIColor) {
         let w = SCNVector3(x: endPoint.x-startPoint.x,
                            y: endPoint.y-startPoint.y,
                            z: endPoint.z-startPoint.z)
@@ -88,8 +90,6 @@ class LightningLineNode: SCNNode {
         self.transform.m42 = (startPoint.y + endPoint.y) / 2.0
         self.transform.m43 = (startPoint.z + endPoint.z) / 2.0
         self.transform.m44 = 1.0
-//
-//        self.addParticleSystem(particleSystem!)
     }
     
     required init?(coder aDecoder: NSCoder) {

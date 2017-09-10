@@ -18,13 +18,13 @@ class GameViewController: UIViewController {
     let boltLifetime = 0.1
     
     // Line draw delay (in seconds). Set as 0 if you want whole bolt to draw instantly
-    let lineDrawDelay = 0.00175
+    let lineDrawDelay = 0.00375
     
     // 0.0 - the bolt will be a straight line. >1.0 - the bolt will look unnatural
-    let displaceCoefficient = 0.25
+    let displaceCoefficient = 0.05
     
-    // Make bigger if you want bigger line lenght and vice versa
-    let lineRangeCoefficient = 1.8
+    // Make bigger if you want bigger line length and vice versa
+    let lineRangeCoefficient = 0.05
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,7 +61,7 @@ class GameViewController: UIViewController {
 //        let twoPointsNode1 = LightningLineNode(from: sphere1.position, to: sphere2.position, radius: 0.02, color: .cyan)
 //        scene.rootNode.addChildNode(twoPointsNode1)
         
-        let bolt = LightningBoltNode(startPoint: sphere1.position, endPoint: sphere2.position, lifetime: self.boltLifetime, lineDrawDelay: self.lineDrawDelay, displaceCoefficient: self.displaceCoefficient, lineRangeCoefficient: self.lineRangeCoefficient)
+        let bolt = LightningBoltNode(startPoint: sphere2.position, endPoint: sphere1.position, lifetime: self.boltLifetime, lineDrawDelay: self.lineDrawDelay, displaceCoefficient: self.displaceCoefficient, lineRangeCoefficient: self.lineRangeCoefficient)
 
         scene.rootNode.addChildNode(bolt)
 
